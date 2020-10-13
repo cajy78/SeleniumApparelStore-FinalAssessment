@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="ParallelLoginSuite" verbose="1"  parallel="tests" thread-count="5">
+  	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	<test name="MacOS+Chrome">
+		<parameter name="browser" value="chrome"/>
+   		<!-- <parameter name="platform" value="win10"/>
+   		<parameter name="version" value="85"/> -->
+    	<classes>
+      		<class name="org.apparelStore1.test.nonfunctional.ParallelLoginTests"/>
+    	</classes>
+  	</test>
+  	<test name="MacOS+Firefox">
+		<parameter name="browser" value="firefox"/>
+   		<!-- <parameter name="platform" value="win10"/>
+   		<parameter name="version" value="85"/> -->
+    	<classes>
+      		<class name="org.apparelStore1.test.nonfunctional.ParallelLoginTests"/>
+    	</classes>
+  	</test>
+  	  	<test name="MacOS+Safari">
+		<parameter name="browser" value="safari"/>
+   		<!-- <parameter name="platform" value="win10"/>
+   		<parameter name="version" value="85"/> -->
+    	<classes>
+      		<class name="org.apparelStore1.test.nonfunctional.ParallelLoginTests"/>
+    	</classes>
+  	</test>
+</suite>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ApparelStoreTestSuite">
+  	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+  <test name="Test">
+    <classes>
+      <class name="org.apparelStore1.test.functional.TestPurchaseNewProducts"/>
+      <class name="org.apparelStore1.test.functional.TestAccountCreation"/>
+      <class name="org.apparelStore1.test.functional.TestAccountLogins"/>
+      <class name="org.apparelStore1.test.functional.TestProductReview"/>
+      <class name="org.apparelStore1.test.functional.TestSearchProducts"/>
+      <class name="org.apparelStore1.test.functional.TestSocialShare"/>
+      <class name="org.apparelStore1.test.nonfunctional.TestBrowserTypes"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
